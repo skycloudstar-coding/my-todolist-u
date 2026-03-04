@@ -116,7 +116,6 @@ node --version
 curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
 sudo apt-get install -y nodejs
 node --version
-sudo npm install -g @anthropic-ai/claude-code
 ```
 
 ### 8.6 Git 설치 및 설정 (Ubuntu 터미널에서)
@@ -142,13 +141,14 @@ cd C:\vibe
 git clone https://github.com/sujinchoi-u/my-todolist-u
 ```
 
-## 10. Claude를 Ubuntu 샌드박스 환경에서 호출
+## 10. Claude 실행 (Windows 터미널에서)
 
-```bash
-wsl          # Ubuntu 진입
-claude       # Claude 실행
-/usage       # 명령 실행해보기
+```powershell
+cd C:\vibe\my-todolist-u
+claude
 ```
+
+> Claude Code 실행 후 `/usage` 명령으로 사용량 확인 가능
 
 ---
 
