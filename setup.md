@@ -189,3 +189,46 @@ npm run dev
 **테스트 계정:**
 - `alice@example.com` / `Password1!`
 - `bob@example.com` / `Password1!`
+
+---
+
+## 12. Swagger Mock 서버 설정 및 사용법
+
+백엔드 구현 전에 프론트엔드를 개발하거나, API 명세(요청/응답 형식)를 미리 확인하기 위한 목서버입니다.
+실제 DB나 비즈니스 로직은 없으며, `swagger.json` 명세 기반으로 가짜 응답을 자동 생성합니다.
+
+### 의존성 설치 (최초 1회)
+
+```bash
+cd mockup
+npm install
+cd ..
+```
+
+### 실행 (프로젝트 루트에서)
+
+```bash
+npm run dev:mock
+```
+
+| 서비스 | 주소 |
+|---|---|
+| 목서버 API | http://localhost:4010/api |
+| Swagger UI | http://localhost:4010/docs |
+| 프론트엔드 | http://localhost:5173 |
+
+### Swagger UI에서 API 테스트하는 법
+
+1. http://localhost:4010/docs 접속
+2. 테스트할 API 엔드포인트 클릭
+3. **Try it out** 버튼 클릭
+4. 파라미터 입력 후 **Execute** 클릭
+5. `swagger.json` 명세 기반으로 자동 생성된 가짜 응답 확인
+
+### 실제 백엔드 Swagger UI
+
+백엔드 실행(`npm run dev`) 후 아래 주소에서 실제 DB와 연동된 API 테스트 가능:
+
+```
+http://localhost:3000/api-docs
+```

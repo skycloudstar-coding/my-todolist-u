@@ -1,10 +1,13 @@
+const path = require("path");
 const express = require("express");
 const { createMockMiddleware } = require("openapi-mock-express-middleware");
 const swaggerUi = require("swagger-ui-express");
 const swaggerDoc = require("../swagger/swagger.json");
 
+const specPath = path.resolve(__dirname, "../swagger/swagger.json");
+
 const app = express();
-app.use("/api", createMockMiddleware({ spec: "../swagger/swagger.json" }));
+app.use("/api", createMockMiddleware({ spec: specPath }));
 app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerDoc));
 
 app.listen(4010, () => {
