@@ -134,7 +134,7 @@ git config --list
 
 ---
 
-## 9. 프로젝트 클론 (Ubuntu 터미널에서)
+## 9. 프로젝트 클론 (Windows 터미널에서)
 
 ```bash
 git clone https://github.com/sujinchoi-u/my-todolist-u
