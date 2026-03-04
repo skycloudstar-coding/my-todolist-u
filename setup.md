@@ -174,3 +174,18 @@ psql --version   # psql 17.x 이상
 bash tododb-setup.sh
 # DB 비밀번호: post
 ```
+
+### 설치 완료 후 실행 방법
+
+```bash
+npm run dev
+```
+
+| 항목 | 주소 |
+|---|---|
+| 프론트엔드 | http://localhost:5173 |
+| 백엔드 API | http://localhost:3000 |
+
+**테스트 계정:**
+- `alice@example.com` / `Password1!`
+- `bob@example.com` / `Password1!`
